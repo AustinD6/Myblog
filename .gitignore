@@ -1,0 +1,7 @@
+node_modules/
+public/
+.deploy*/
+.git/
+themes/next/.git/
+.DS_Store
+*.log
