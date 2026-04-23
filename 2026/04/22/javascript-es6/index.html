@@ -20,24 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"austind6.github.io","root":"/Myblog/","images":"/Myblog/images","scheme":"Pisces","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/Myblog/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Myblog/js/config.js" defer></script>
 
-    <meta name="description" content="一个 personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的个人博客">
-<meta property="og:url" content="https://austind6.github.io/Myblog/index.html">
+    <meta name="description" content="ES6（ECMAScript 2015）及其后续版本为 JavaScript 带来了许多强大的新特性。本文总结了我在日常开发中最常用的 ES6+ 特性。 1. 箭头函数箭头函数提供了一种更简洁的函数定义方式，同时解决了 this 指向的问题。 12345678910111213&#x2F;&#x2F; 传统函数function add(a, b) &#123;  return a + b;&#125;&#x2F;&#x2F; 箭头函数c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript ES6+ 常用特性总结">
+<meta property="og:url" content="https://austind6.github.io/Myblog/2026/04/22/javascript-es6/index.html">
 <meta property="og:site_name" content="我的个人博客">
-<meta property="og:description" content="一个 personal blog">
+<meta property="og:description" content="ES6（ECMAScript 2015）及其后续版本为 JavaScript 带来了许多强大的新特性。本文总结了我在日常开发中最常用的 ES6+ 特性。 1. 箭头函数箭头函数提供了一种更简洁的函数定义方式，同时解决了 this 指向的问题。 12345678910111213&#x2F;&#x2F; 传统函数function add(a, b) &#123;  return a + b;&#125;&#x2F;&#x2F; 箭头函数c">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-22T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-23T07:37:06.762Z">
 <meta property="article:author" content="Your Name">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="ES6">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://austind6.github.io/Myblog/">
+<link rel="canonical" href="https://austind6.github.io/Myblog/2026/04/22/javascript-es6/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://austind6.github.io/Myblog/2026/04/22/javascript-es6/","path":"2026/04/22/javascript-es6/","title":"JavaScript ES6+ 常用特性总结"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>我的个人博客</title>
+<title>JavaScript ES6+ 常用特性总结 | 我的个人博客</title>
   
 
 
@@ -89,7 +94,7 @@
 
     <a href="/Myblog/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">我的个人博客</h1>
+      <p class="site-title">我的个人博客</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">分享技术与生活</p>
@@ -143,7 +148,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -156,6 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">1. 箭头函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="nav-number">2.</span> <span class="nav-text">2. 解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">3.</span> <span class="nav-text">3. 模板字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Promise-%E5%92%8C-async-await"><span class="nav-number">4.</span> <span class="nav-text">4. Promise 和 async&#x2F;await</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">5.</span> <span class="nav-text">5. 展开运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%8F%AF%E9%80%89%E9%93%BE%E5%92%8C%E7%A9%BA%E5%80%BC%E5%90%88%E5%B9%B6"><span class="nav-number">6.</span> <span class="nav-text">6. 可选链和空值合并</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -201,111 +207,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://austind6.github.io/Myblog/2026/04/23/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/Myblog/images/avatar.gif">
-      <meta itemprop="name" content="Your Name">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的个人博客">
-      <meta itemprop="description" content="一个 personal blog">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 我的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Myblog/2026/04/23/hello-world/" class="post-title-link" itemprop="url">欢迎来到我的博客</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2026-04-23 15:10:00 / 修改时间：15:07:54" itemprop="dateCreated datePublished" datetime="2026-04-23T15:10:00+08:00">2026-04-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/Myblog/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>欢迎来到我的个人博客！</p>
-<p>这是一个使用 Hexo 搭建的静态博客网站。</p>
-<h2 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h2><p>这个博客将分享：</p>
-<ul>
-<li>技术笔记</li>
-<li>学习心得</li>
-<li>生活随想</li>
-</ul>
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>如果你也想搭建一个类似的博客，可以参考以下步骤：</p>
-<ol>
-<li>安装 Node.js</li>
-<li>安装 Hexo：<code>npm install -g hexo-cli</code></li>
-<li>初始化博客：<code>hexo init my-blog</code></li>
-<li>选择主题并配置</li>
-<li>部署到 GitHub Pages</li>
-</ol>
-<p>祝你在博客之旅中收获满满！</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://austind6.github.io/Myblog/2026/04/22/javascript-es6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -319,13 +231,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 我的个人博客">
+      <meta itemprop="name" content="JavaScript ES6+ 常用特性总结 | 我的个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Myblog/2026/04/22/javascript-es6/" class="post-title-link" itemprop="url">JavaScript ES6+ 常用特性总结</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript ES6+ 常用特性总结
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -363,8 +275,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <p>ES6（ECMAScript 2015）及其后续版本为 JavaScript 带来了许多强大的新特性。本文总结了我在日常开发中最常用的 ES6+ 特性。</p>
+    <div class="post-body" itemprop="articleBody"><p>ES6（ECMAScript 2015）及其后续版本为 JavaScript 带来了许多强大的新特性。本文总结了我在日常开发中最常用的 ES6+ 特性。</p>
 <h2 id="1-箭头函数"><a href="#1-箭头函数" class="headerlink" title="1. 箭头函数"></a>1. 箭头函数</h2><p>箭头函数提供了一种更简洁的函数定义方式，同时解决了 <code>this</code> 指向的问题。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 传统函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params">a, b</span>) =&gt; a + b;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 带函数体</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">multiply</span> = (<span class="params">a, b</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> result = a * b;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -384,7 +295,6 @@
 <hr>
 <p>掌握这些 ES6+ 特性可以让你的 JavaScript 代码更加简洁和优雅。建议在日常开发中多加练习，逐渐掌握这些特性。</p>
 
-      
     </div>
 
     
@@ -392,237 +302,30 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/Myblog/tags/JavaScript/" rel="tag"># JavaScript</a>
+              <a href="/Myblog/tags/ES6/" rel="tag"># ES6</a>
+              <a href="/Myblog/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Myblog/2026/04/21/git-commands/" rel="prev" title="Git 常用命令速查表">
+                  <i class="fa fa-angle-left"></i> Git 常用命令速查表
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Myblog/2026/04/23/hello-world/" rel="next" title="欢迎来到我的博客">
+                  欢迎来到我的博客 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://austind6.github.io/Myblog/2026/04/21/git-commands/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/Myblog/images/avatar.gif">
-      <meta itemprop="name" content="Your Name">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的个人博客">
-      <meta itemprop="description" content="一个 personal blog">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 我的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Myblog/2026/04/21/git-commands/" class="post-title-link" itemprop="url">Git 常用命令速查表</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-04-21 14:00:00" itemprop="dateCreated datePublished" datetime="2026-04-21T14:00:00+08:00">2026-04-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-04-23 15:37:29" itemprop="dateModified" datetime="2026-04-23T15:37:29+08:00">2026-04-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/Myblog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">技术笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Git 是现代开发中不可或缺的版本控制工具。本文整理了我在日常开发中最常用的 Git 命令。</p>
-<h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置用户名和邮箱</span></span><br><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your.email@example.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-
-<h2 id="仓库操作"><a href="#仓库操作" class="headerlink" title="仓库操作"></a>仓库操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化仓库</span></span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 克隆远程仓库</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/user/repo.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加远程仓库</span></span><br><span class="line">git remote add origin https://github.com/user/repo.git</span><br></pre></td></tr></table></figure>
-
-<h2 id="提交操作"><a href="#提交操作" class="headerlink" title="提交操作"></a>提交操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看具体修改</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加文件到暂存区</span></span><br><span class="line">git add filename.txt</span><br><span class="line">git add .  <span class="comment"># 添加所有文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交修改</span></span><br><span class="line">git commit -m <span class="string">&quot;commit message&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 撤销修改</span></span><br><span class="line">git checkout -- filename  <span class="comment"># 丢弃工作区修改</span></span><br><span class="line">git reset HEAD filename   <span class="comment"># 撤销暂存区修改</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看分支</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建分支</span></span><br><span class="line">git branch feature-branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换分支</span></span><br><span class="line">git checkout feature-branch</span><br><span class="line">git switch feature-branch  <span class="comment"># 新语法</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建并切换</span></span><br><span class="line">git checkout -b feature-branch</span><br><span class="line">git switch -c feature-branch  <span class="comment"># 新语法</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 合并分支</span></span><br><span class="line">git merge feature-branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除分支</span></span><br><span class="line">git branch -d feature-branch</span><br><span class="line">git branch -D feature-branch  <span class="comment"># 强制删除</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="远程操作"><a href="#远程操作" class="headerlink" title="远程操作"></a>远程操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拉取代码</span></span><br><span class="line">git pull origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送代码</span></span><br><span class="line">git push origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看远程仓库</span></span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
-
-<h2 id="日志查看"><a href="#日志查看" class="headerlink" title="日志查看"></a>日志查看</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看提交历史</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line">git <span class="built_in">log</span> --oneline  <span class="comment"># 简洁格式</span></span><br><span class="line">git <span class="built_in">log</span> --graph    <span class="comment"># 图形化显示</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看指定文件的历史</span></span><br><span class="line">git <span class="built_in">log</span> filename</span><br></pre></td></tr></table></figure>
-
-<h2 id="标签操作"><a href="#标签操作" class="headerlink" title="标签操作"></a>标签操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建标签</span></span><br><span class="line">git tag v1.0.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送标签</span></span><br><span class="line">git push origin v1.0.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除本地标签</span></span><br><span class="line">git tag -d v1.0.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除远程标签</span></span><br><span class="line">git push origin :refs/tags/v1.0.0</span><br></pre></td></tr></table></figure>
-
-<h2 id="实用技巧"><a href="#实用技巧" class="headerlink" title="实用技巧"></a>实用技巧</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 储藏当前工作</span></span><br><span class="line">git stash</span><br><span class="line">git stash pop</span><br><span class="line"></span><br><span class="line"><span class="comment"># 撤销最后一次提交（保留修改）</span></span><br><span class="line">git reset --soft HEAD~1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看谁修改了某行代码</span></span><br><span class="line">git blame filename</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清理未跟踪文件</span></span><br><span class="line">git clean -fd</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>掌握这些命令可以大大提高开发效率。建议熟记常用命令，忘记时随时查阅这篇笔记！</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://austind6.github.io/Myblog/2026/04/20/learning-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/Myblog/images/avatar.gif">
-      <meta itemprop="name" content="Your Name">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的个人博客">
-      <meta itemprop="description" content="一个 personal blog">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 我的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Myblog/2026/04/20/learning-notes/" class="post-title-link" itemprop="url">我的编程学习之路</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-04-20 09:00:00" itemprop="dateCreated datePublished" datetime="2026-04-20T09:00:00+08:00">2026-04-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-04-23 15:37:36" itemprop="dateModified" datetime="2026-04-23T15:37:36+08:00">2026-04-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/Myblog/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>编程是一门需要不断学习和实践的艺术。回顾我的编程学习之路，有一些心得想和大家分享。</p>
-<h2 id="1-培养编程思维"><a href="#1-培养编程思维" class="headerlink" title="1. 培养编程思维"></a>1. 培养编程思维</h2><p>编程不仅仅是学习语法，更重要的是培养编程思维：</p>
-<ul>
-<li><strong>分解问题</strong>：把大问题分解成小问题</li>
-<li><strong>模式识别</strong>：找出重复的模式</li>
-<li><strong>抽象思维</strong>：忽略细节，关注核心</li>
-</ul>
-<h2 id="2-多动手实践"><a href="#2-多动手实践" class="headerlink" title="2. 多动手实践"></a>2. 多动手实践</h2><p>看十遍教程不如动手写一行代码。建议：</p>
-<ul>
-<li>每一个知识点都亲自实践</li>
-<li>遇到问题先自己尝试解决</li>
-<li>完成小项目巩固所学</li>
-</ul>
-<h2 id="3-善用搜索引擎"><a href="#3-善用搜索引擎" class="headerlink" title="3. 善用搜索引擎"></a>3. 善用搜索引擎</h2><p>遇到问题时，搜索引擎是最好的老师：</p>
-<ul>
-<li>Google &gt; 百度（对于技术问题）</li>
-<li>Stack Overflow 是解决问题的宝库</li>
-<li>善用关键词搜索</li>
-</ul>
-<h2 id="4-阅读优质代码"><a href="#4-阅读优质代码" class="headerlink" title="4. 阅读优质代码"></a>4. 阅读优质代码</h2><p>学习别人的代码是提升编程能力的好方法：</p>
-<ul>
-<li>阅读开源项目的源码</li>
-<li>学习优秀的开源库</li>
-<li>关注 GitHub 上的热门项目</li>
-</ul>
-<h2 id="5-保持好奇心"><a href="#5-保持好奇心" class="headerlink" title="5. 保持好奇心"></a>5. 保持好奇心</h2><p>技术更新很快，保持好奇心很重要：</p>
-<ul>
-<li>关注新技术新趋势</li>
-<li>尝试新工具新框架</li>
-<li>参与技术社区讨论</li>
-</ul>
-<h2 id="我的学习资源"><a href="#我的学习资源" class="headerlink" title="我的学习资源"></a>我的学习资源</h2><ul>
-<li><strong>文档</strong>: 官方文档是最权威的学习资料</li>
-<li><strong>书籍</strong>: 《JavaScript高级程序设计》、《算法导论》</li>
-<li><strong>视频</strong>: B站、YouTube 上的优质教程</li>
-<li><strong>博客</strong>: 关注技术大牛的博客</li>
-</ul>
-<hr>
-<p>学习编程是一个漫长的过程，需要耐心和毅力。希望我的经验对你有所帮助！</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
